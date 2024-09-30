@@ -37,8 +37,15 @@ void TypeChecker::deleteInstance()
 
 bool TypeChecker::isWeakTo(Type typePokemon, Type typeMove)
 {
+	bool isWeak = false;
+
+	if (typePokemon == NONE || typeMove == NONE)
+	{
+		return isWeak;
+	}
+
 	std::vector<Type> weakVector = weakness.at(typePokemon);
-	bool isWeak = std::count(weakVector.begin(), weakVector.end(), typeMove);
+	isWeak = std::count(weakVector.begin(), weakVector.end(), typeMove);
 	return isWeak;
 }
 

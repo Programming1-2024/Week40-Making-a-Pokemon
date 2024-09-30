@@ -163,10 +163,15 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="PokemonTest.cpp" />
-    <ClCompile Include="Source.cpp" />
+    <ClCompile Include="TypeCheckerTest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PokemonProject\PokemonProject.vcxproj">
+      <Project>{9f507f98-cab4-465a-9bba-b57453a19f9c}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
