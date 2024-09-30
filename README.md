@@ -12,6 +12,10 @@ our list of items needs to be
 - Move (struct)
 - TypeChecker (class, our singleton)
 
+I have intentionally not written tests for all the following conditions, so that you can learn to write your own tests by analyzing the syntax i have already written. The procedure in Test Driven Development is for you to start by making your tests, then implement your functions to fit the test. another practice is to then try to break your tests, and then fix the test to account for the weakness. generally three such loops of breaking the test is enough for you to understand how to make the function more robust during refactoring (rewriting your code, but better).
+
+I have also tried to include a good code structure in the code you are given, and i hope that some of you will find the structuring interesing enough to investigate further. You won't be learning how to make good structure in your code as curiculum at least for the first three semesters, so i will try to show it to you instead through tasks.
+
 ## IPokemon
 
 - you can deal damage to a pokemon with Damage(Move moveUsed)
