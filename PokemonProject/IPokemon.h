@@ -13,8 +13,12 @@
 * 
 * A pure virtual function is a funcion that can be overriden by children, and which is not implemented in the
 * parent class.
+* 
+* Note: the name of an interface usually starts with an I for "interface", or ends with -able like "Rideable" or "Pokemonable".
 */
 class IPokemon {
+
+public:
 	/**
 	* Deal damage to this Pokemon. Damage will leave the Pokemon at minimum 0 HP.
 	* Negative Damage values do not affect the Pokemon HP.
