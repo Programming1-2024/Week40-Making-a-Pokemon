@@ -19,6 +19,9 @@ void TypeChecker::initWeakness()
 
 void TypeChecker::initResistance()
 {
+	resistance[FIRE].push_back(GRASS);
+	resistance[WATER].push_back(FIRE);
+	resistance[GRASS].push_back(WATER);
 }
 
 TypeChecker& TypeChecker::getInstance()
@@ -51,8 +54,15 @@ bool TypeChecker::isWeakTo(Type typePokemon, Type typeMove)
 
 bool TypeChecker::isResistantTo(Type typePokemon, Type typeMove)
 {
+	bool isResistant = false;
+
+	if (typePokemon == NONE || typeMove == NONE)
+	{
+		return isResistant;
+	}
+
 	std::vector<Type> resistantVector = resistance.at(typePokemon);
-	bool isResistant = std::count(resistantVector.begin(), resistantVector.end(), typeMove);
+	isResistant = std::count(resistantVector.begin(), resistantVector.end(), typeMove);
 	return isResistant;
 }
 

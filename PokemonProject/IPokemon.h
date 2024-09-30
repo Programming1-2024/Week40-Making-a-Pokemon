@@ -59,4 +59,9 @@ public:
 	* @return True if the move was added, false otherwise.
 	*/
 	virtual bool AddMove(Move newMove) = 0;
+
+	/**
+	* Get the name of the Pokemon.
+	*/
+	virtual std::string GetName() = 0;
 };

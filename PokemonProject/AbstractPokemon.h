@@ -13,14 +13,15 @@
 class AbstractPokemon :
 	public IPokemon // this ": public IPokemon" means that AbstractPokemon inherits from IPokemon
 {
-protected: //protected means that only children can access these variables and functions
-	AbstractPokemon(int MaxHP, Move startMove, Type typeOne, Type typeTwo = NONE);
+public: //protected means that only children can access these variables and functions
+	AbstractPokemon(std::string pokemonName, int MaxHP, Move startMove, Type typeOne, Type typeTwo = NONE);
 
 	int HPcurrent;
 	int HPmax;
 	Type typePrimary;
 	Type typeSecondary;
 	std::vector<Move> moveList;
+	std::string name;
 
 
 public:
@@ -32,6 +33,10 @@ public:
 	virtual Move GetMove(int moveIndex) override;
 	virtual bool AddMove(Move newMove) override;
 
+
+
+	// Inherited via IPokemon
+	std::string GetName() override;
 
 };
 
